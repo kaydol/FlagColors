@@ -1,4 +1,5 @@
 
+using System.Collections.Immutable;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
@@ -212,6 +213,8 @@ namespace FlagColors
         private Button GetFilterNameResetButton() => filterButtonReset;
         private TextBox GetFilterName() => filterTextBoxName;
 
+        private CheckBox GetFilterExactMatch() => filterCheckBoxExactMatch;
+
         private IEnumerable<string> GetFilterControlsColors()
         {
             return GetFilterControls().Where(e => e.Checked).Select(e => e.Text);
@@ -220,6 +223,8 @@ namespace FlagColors
         private void ClearFilterControls()
         {
             SetCurrentSelection(null); // has to be done first, because...
+
+            GetFilterExactMatch().Checked = false; // ...this triggers OnEditorCheckBoxCheckedChanged...
 
             foreach (var cb in GetFilterControls())
                 cb.Checked = false; // ...this triggers OnEditorCheckBoxCheckedChanged...
@@ -234,12 +239,15 @@ namespace FlagColors
 
             var colors = GetFilterControlsColors().ToArray();
 
+            var isExactMatch = GetFilterExactMatch().Checked;
+
             var toAdd = new List<FlagModel>();
             var toRemove = new List<string>();
 
             toAdd.AddRange(_data.Flags.Where(x =>
                 // model satisfies color filter 
-                (!colors.Any() || colors.All(c => x.GetColors().Contains(c, StringComparer.OrdinalIgnoreCase)))
+                (!colors.Any() || (!isExactMatch && colors.All(c => x.GetColors().Contains(c, StringComparer.OrdinalIgnoreCase))) ||
+                                  (isExactMatch && colors.Order().SequenceEqual(x.GetColors().Order(), StringComparer.OrdinalIgnoreCase)))
                 &&
                 // model satisfies name filter 
                 (GetFilterName().Text == string.Empty || (x.Name!.Contains(GetFilterName().Text, StringComparison.OrdinalIgnoreCase)))
@@ -256,7 +264,8 @@ namespace FlagColors
                     !item.Text.Contains(GetFilterName().Text, StringComparison.OrdinalIgnoreCase);
 
                 var deleteByColor = colors.Any() &&
-                    !colors.All(c => x.GetColors().Contains(c, StringComparer.OrdinalIgnoreCase));
+                    ((!isExactMatch && !colors.All(c => x.GetColors().Contains(c, StringComparer.OrdinalIgnoreCase))) ||
+                     (isExactMatch && !colors.Order().SequenceEqual(x.GetColors().Order(), StringComparer.OrdinalIgnoreCase)));
 
                 if (deleteByName || deleteByColor)
                     toRemove.Add(x.Name!);

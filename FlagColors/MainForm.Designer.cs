@@ -34,6 +34,7 @@
             imageList1 = new ImageList(components);
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            filterCheckBoxExactMatch = new CheckBox();
             filterCheckBoxPurple = new CheckBox();
             filterButtonReset = new Button();
             filterTextBoxName = new TextBox();
@@ -98,6 +99,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(filterCheckBoxExactMatch);
             tabPage1.Controls.Add(filterCheckBoxPurple);
             tabPage1.Controls.Add(filterButtonReset);
             tabPage1.Controls.Add(filterTextBoxName);
@@ -117,6 +119,17 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Filter";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // filterCheckBoxExactMatch
+            // 
+            filterCheckBoxExactMatch.AutoSize = true;
+            filterCheckBoxExactMatch.Location = new Point(780, 10);
+            filterCheckBoxExactMatch.Name = "filterCheckBoxExactMatch";
+            filterCheckBoxExactMatch.Size = new Size(108, 24);
+            filterCheckBoxExactMatch.TabIndex = 12;
+            filterCheckBoxExactMatch.Text = "Exact match";
+            filterCheckBoxExactMatch.UseVisualStyleBackColor = true;
+            filterCheckBoxExactMatch.CheckedChanged += OnFilterCheckBoxCheckedChanged;
             // 
             // filterCheckBoxPurple
             // 
@@ -439,7 +452,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FlagColors by kaydol v1.0";
+            Text = "FlagColors by kaydol v1.01";
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
@@ -482,5 +495,6 @@
         private TextBox filterTextBoxName;
         private Button filterButtonReset;
         private CheckBox filterCheckBoxPurple;
+        private CheckBox filterCheckBoxExactMatch;
     }
 }
