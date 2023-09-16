@@ -219,8 +219,6 @@ namespace FlagColors
 
         private void ClearFilterControls()
         {
-            GetFilterNameResetButton().Enabled = false;
-
             SetCurrentSelection(null); // has to be done first, because...
 
             foreach (var cb in GetFilterControls())
@@ -282,6 +280,11 @@ namespace FlagColors
 
         private void OnFilterTextBoxNameTextChanged(object sender, EventArgs e)
         {
+            if (GetFilterName().Text != string.Empty)
+                GetFilterNameResetButton().Enabled = true;
+            else
+                GetFilterNameResetButton().Enabled = false;
+
             UpdateItems();
         }
 
