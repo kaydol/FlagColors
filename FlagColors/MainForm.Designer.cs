@@ -690,7 +690,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FlagColors by kaydol v1.01";
+            Text = "FlagColors by kaydol v1.02";
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
