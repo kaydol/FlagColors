@@ -14,8 +14,18 @@ namespace FlagColors
         {
             InitializeComponent();
 
-            var defaultData = FlagService.LoadDefaultDataFile();
-            _data = defaultData ?? new FlagData();
+            try
+            {
+                var defaultData = FlagService.LoadDefaultDataFile();
+                _data = defaultData;
+            }
+            catch (Exception ex)
+            {
+                ShowError(ex.Message);
+            }
+
+            if (_data == null)
+                _data = new FlagData();
 
             //var pathToFile = "C:\\Users\\volya\\Desktop\\Flags of the world\\ToParse.txt";
             //_data.Flags = FlagService.ParseWebPage(pathToFile);

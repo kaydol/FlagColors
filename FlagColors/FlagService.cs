@@ -37,11 +37,11 @@ namespace FlagColors
         {
             FileStream fs;
 
-            if (!Path.Exists(fileName))
-                fs = File.Create(fileName);
-            else
-                fs = File.OpenWrite(fileName);
+            if (Path.Exists(fileName))
+                File.Delete(fileName);
 
+            fs = File.Create(fileName);
+            
             XmlSerializer serializer = new XmlSerializer(typeof(FlagData));
             serializer.Serialize(fs, data);
 
