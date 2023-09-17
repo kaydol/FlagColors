@@ -54,7 +54,7 @@ namespace FlagColors
 
         private void OnTabControlSelectedIndexChanged(object sender, EventArgs e)
         {
-            ClearFilterControls();
+            //ClearFilterControls();
 
             // If an item was selected in the Filter tab, and then the tab was switched to Editor
             // this makes sure that the Editor controls are filled
