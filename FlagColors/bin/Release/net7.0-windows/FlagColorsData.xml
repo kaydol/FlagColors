@@ -2513,5 +2513,17 @@
         <string>TRIANGLES</string>
       </Shapes>
     </FlagModel>
+    <FlagModel>
+      <Name>Singapore</Name>
+      <PathToPicture>\Data\sg.svg</PathToPicture>
+      <Colors>
+        <string>RED</string>
+        <string>WHITE</string>
+      </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>CRESCENT MOON</string>
+      </Shapes>
+    </FlagModel>
   </Flags>
 </FlagData>
