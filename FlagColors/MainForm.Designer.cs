@@ -34,9 +34,20 @@
             imageList1 = new ImageList(components);
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            groupBox2 = new GroupBox();
+            filterButtonResetShapes = new Button();
+            groupBox1 = new GroupBox();
+            filterCheckBoxTriangles = new CheckBox();
+            filterCheckBoxWriting = new CheckBox();
+            filterCheckBoxMoon = new CheckBox();
+            filterCheckBoxDiagonal = new CheckBox();
+            filterCheckBoxVertical = new CheckBox();
+            filterCheckBoxHorizontal = new CheckBox();
+            filterCheckBoxCrosses = new CheckBox();
+            label5 = new Label();
             filterCheckBoxExactMatch = new CheckBox();
             filterCheckBoxPurple = new CheckBox();
-            filterButtonReset = new Button();
+            filterButtonResetName = new Button();
             filterTextBoxName = new TextBox();
             label4 = new Label();
             label3 = new Label();
@@ -48,6 +59,14 @@
             filterCheckBoxYellow = new CheckBox();
             filterCheckBoxRed = new CheckBox();
             tabPage2 = new TabPage();
+            editorCheckBoxWriting = new CheckBox();
+            editorCheckBoxMoon = new CheckBox();
+            label6 = new Label();
+            editorCheckBoxTriangles = new CheckBox();
+            editorCheckBoxCrosses = new CheckBox();
+            editorCheckBoxDiagonal = new CheckBox();
+            editorCheckBoxVertical = new CheckBox();
+            editorCheckBoxHorizontal = new CheckBox();
             editorCheckBoxWhite = new CheckBox();
             editorButtonLoad = new Button();
             editorButtonSave = new Button();
@@ -73,9 +92,9 @@
             // 
             flagsListView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             flagsListView.LargeImageList = imageList1;
-            flagsListView.Location = new Point(12, 124);
+            flagsListView.Location = new Point(12, 204);
             flagsListView.Name = "flagsListView";
-            flagsListView.Size = new Size(948, 318);
+            flagsListView.Size = new Size(946, 354);
             flagsListView.TabIndex = 1;
             flagsListView.UseCompatibleStateImageBehavior = false;
             flagsListView.ItemSelectionChanged += OnItemSelectionChanged;
@@ -93,15 +112,26 @@
             tabControl1.Location = new Point(12, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(948, 106);
+            tabControl1.Size = new Size(948, 190);
             tabControl1.TabIndex = 1;
             tabControl1.SelectedIndexChanged += OnTabControlSelectedIndexChanged;
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(groupBox2);
+            tabPage1.Controls.Add(filterButtonResetShapes);
+            tabPage1.Controls.Add(groupBox1);
+            tabPage1.Controls.Add(filterCheckBoxTriangles);
+            tabPage1.Controls.Add(filterCheckBoxWriting);
+            tabPage1.Controls.Add(filterCheckBoxMoon);
+            tabPage1.Controls.Add(filterCheckBoxDiagonal);
+            tabPage1.Controls.Add(filterCheckBoxVertical);
+            tabPage1.Controls.Add(filterCheckBoxHorizontal);
+            tabPage1.Controls.Add(filterCheckBoxCrosses);
+            tabPage1.Controls.Add(label5);
             tabPage1.Controls.Add(filterCheckBoxExactMatch);
             tabPage1.Controls.Add(filterCheckBoxPurple);
-            tabPage1.Controls.Add(filterButtonReset);
+            tabPage1.Controls.Add(filterButtonResetName);
             tabPage1.Controls.Add(filterTextBoxName);
             tabPage1.Controls.Add(label4);
             tabPage1.Controls.Add(label3);
@@ -115,10 +145,124 @@
             tabPage1.Location = new Point(4, 28);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(940, 74);
+            tabPage1.Size = new Size(940, 158);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Filter";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Location = new Point(6, 106);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(0);
+            groupBox2.Size = new Size(928, 10);
+            groupBox2.TabIndex = 25;
+            groupBox2.TabStop = false;
+            // 
+            // filterButtonResetShapes
+            // 
+            filterButtonResetShapes.Location = new Point(580, 50);
+            filterButtonResetShapes.Name = "filterButtonResetShapes";
+            filterButtonResetShapes.Size = new Size(73, 57);
+            filterButtonResetShapes.TabIndex = 25;
+            filterButtonResetShapes.Text = "Reset shapes";
+            filterButtonResetShapes.UseVisualStyleBackColor = true;
+            filterButtonResetShapes.Click += OnFilterButtonResetShapesClick;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Location = new Point(6, 34);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(0);
+            groupBox1.Size = new Size(928, 10);
+            groupBox1.TabIndex = 24;
+            groupBox1.TabStop = false;
+            // 
+            // filterCheckBoxTriangles
+            // 
+            filterCheckBoxTriangles.AutoSize = true;
+            filterCheckBoxTriangles.Location = new Point(215, 83);
+            filterCheckBoxTriangles.Name = "filterCheckBoxTriangles";
+            filterCheckBoxTriangles.Size = new Size(103, 24);
+            filterCheckBoxTriangles.TabIndex = 20;
+            filterCheckBoxTriangles.Text = "TRIANGLES";
+            filterCheckBoxTriangles.UseVisualStyleBackColor = true;
+            filterCheckBoxTriangles.CheckedChanged += OnFilterCheckBoxCheckedChanged;
+            // 
+            // filterCheckBoxWriting
+            // 
+            filterCheckBoxWriting.AutoSize = true;
+            filterCheckBoxWriting.Location = new Point(478, 83);
+            filterCheckBoxWriting.Name = "filterCheckBoxWriting";
+            filterCheckBoxWriting.Size = new Size(88, 24);
+            filterCheckBoxWriting.TabIndex = 19;
+            filterCheckBoxWriting.Text = "WRITING";
+            filterCheckBoxWriting.UseVisualStyleBackColor = true;
+            filterCheckBoxWriting.CheckedChanged += OnFilterCheckBoxCheckedChanged;
+            // 
+            // filterCheckBoxMoon
+            // 
+            filterCheckBoxMoon.AutoSize = true;
+            filterCheckBoxMoon.Location = new Point(324, 83);
+            filterCheckBoxMoon.Name = "filterCheckBoxMoon";
+            filterCheckBoxMoon.Size = new Size(148, 24);
+            filterCheckBoxMoon.TabIndex = 18;
+            filterCheckBoxMoon.Text = "CRESCENT MOON";
+            filterCheckBoxMoon.UseVisualStyleBackColor = true;
+            filterCheckBoxMoon.CheckedChanged += OnFilterCheckBoxCheckedChanged;
+            // 
+            // filterCheckBoxDiagonal
+            // 
+            filterCheckBoxDiagonal.AutoSize = true;
+            filterCheckBoxDiagonal.Location = new Point(425, 53);
+            filterCheckBoxDiagonal.Name = "filterCheckBoxDiagonal";
+            filterCheckBoxDiagonal.Size = new Size(144, 24);
+            filterCheckBoxDiagonal.TabIndex = 17;
+            filterCheckBoxDiagonal.Text = "DIAGONAL LINES";
+            filterCheckBoxDiagonal.UseVisualStyleBackColor = true;
+            filterCheckBoxDiagonal.CheckedChanged += OnFilterCheckBoxCheckedChanged;
+            // 
+            // filterCheckBoxVertical
+            // 
+            filterCheckBoxVertical.AutoSize = true;
+            filterCheckBoxVertical.Location = new Point(286, 53);
+            filterCheckBoxVertical.Name = "filterCheckBoxVertical";
+            filterCheckBoxVertical.Size = new Size(133, 24);
+            filterCheckBoxVertical.TabIndex = 16;
+            filterCheckBoxVertical.Text = "VERTICAL LINES";
+            filterCheckBoxVertical.UseVisualStyleBackColor = true;
+            filterCheckBoxVertical.CheckedChanged += OnFilterCheckBoxCheckedChanged;
+            // 
+            // filterCheckBoxHorizontal
+            // 
+            filterCheckBoxHorizontal.AutoSize = true;
+            filterCheckBoxHorizontal.Location = new Point(120, 53);
+            filterCheckBoxHorizontal.Name = "filterCheckBoxHorizontal";
+            filterCheckBoxHorizontal.Size = new Size(160, 24);
+            filterCheckBoxHorizontal.TabIndex = 15;
+            filterCheckBoxHorizontal.Text = "HORIZONTAL LINES";
+            filterCheckBoxHorizontal.UseVisualStyleBackColor = true;
+            filterCheckBoxHorizontal.CheckedChanged += OnFilterCheckBoxCheckedChanged;
+            // 
+            // filterCheckBoxCrosses
+            // 
+            filterCheckBoxCrosses.AutoSize = true;
+            filterCheckBoxCrosses.Location = new Point(120, 83);
+            filterCheckBoxCrosses.Name = "filterCheckBoxCrosses";
+            filterCheckBoxCrosses.Size = new Size(89, 24);
+            filterCheckBoxCrosses.TabIndex = 14;
+            filterCheckBoxCrosses.Text = "CROSSES";
+            filterCheckBoxCrosses.UseVisualStyleBackColor = true;
+            filterCheckBoxCrosses.CheckedChanged += OnFilterCheckBoxCheckedChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(12, 53);
+            label5.Name = "label5";
+            label5.Size = new Size(98, 20);
+            label5.TabIndex = 13;
+            label5.Text = "Select shapes";
             // 
             // filterCheckBoxExactMatch
             // 
@@ -143,19 +287,19 @@
             filterCheckBoxPurple.UseVisualStyleBackColor = false;
             filterCheckBoxPurple.CheckedChanged += OnFilterCheckBoxCheckedChanged;
             // 
-            // filterButtonReset
+            // filterButtonResetName
             // 
-            filterButtonReset.Location = new Point(270, 39);
-            filterButtonReset.Name = "filterButtonReset";
-            filterButtonReset.Size = new Size(142, 27);
-            filterButtonReset.TabIndex = 10;
-            filterButtonReset.Text = "Reset";
-            filterButtonReset.UseVisualStyleBackColor = true;
-            filterButtonReset.Click += OnFilterButtonResetClick;
+            filterButtonResetName.Location = new Point(270, 127);
+            filterButtonResetName.Name = "filterButtonResetName";
+            filterButtonResetName.Size = new Size(142, 27);
+            filterButtonResetName.TabIndex = 10;
+            filterButtonResetName.Text = "Reset name";
+            filterButtonResetName.UseVisualStyleBackColor = true;
+            filterButtonResetName.Click += OnFilterButtonResetClick;
             // 
             // filterTextBoxName
             // 
-            filterTextBoxName.Location = new Point(120, 40);
+            filterTextBoxName.Location = new Point(120, 128);
             filterTextBoxName.Name = "filterTextBoxName";
             filterTextBoxName.Size = new Size(144, 26);
             filterTextBoxName.TabIndex = 9;
@@ -164,7 +308,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 44);
+            label4.Location = new Point(12, 131);
             label4.Name = "label4";
             label4.Size = new Size(90, 20);
             label4.TabIndex = 8;
@@ -264,6 +408,14 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(editorCheckBoxWriting);
+            tabPage2.Controls.Add(editorCheckBoxMoon);
+            tabPage2.Controls.Add(label6);
+            tabPage2.Controls.Add(editorCheckBoxTriangles);
+            tabPage2.Controls.Add(editorCheckBoxCrosses);
+            tabPage2.Controls.Add(editorCheckBoxDiagonal);
+            tabPage2.Controls.Add(editorCheckBoxVertical);
+            tabPage2.Controls.Add(editorCheckBoxHorizontal);
             tabPage2.Controls.Add(editorCheckBoxWhite);
             tabPage2.Controls.Add(editorButtonLoad);
             tabPage2.Controls.Add(editorButtonSave);
@@ -281,10 +433,96 @@
             tabPage2.Location = new Point(4, 28);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(940, 74);
+            tabPage2.Size = new Size(940, 158);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Editor";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // editorCheckBoxWriting
+            // 
+            editorCheckBoxWriting.AutoSize = true;
+            editorCheckBoxWriting.Location = new Point(478, 83);
+            editorCheckBoxWriting.Name = "editorCheckBoxWriting";
+            editorCheckBoxWriting.Size = new Size(88, 24);
+            editorCheckBoxWriting.TabIndex = 24;
+            editorCheckBoxWriting.Text = "WRITING";
+            editorCheckBoxWriting.UseVisualStyleBackColor = true;
+            editorCheckBoxWriting.CheckedChanged += OnEditorCheckBoxCheckedChanged;
+            // 
+            // editorCheckBoxMoon
+            // 
+            editorCheckBoxMoon.AutoSize = true;
+            editorCheckBoxMoon.Location = new Point(324, 83);
+            editorCheckBoxMoon.Name = "editorCheckBoxMoon";
+            editorCheckBoxMoon.Size = new Size(148, 24);
+            editorCheckBoxMoon.TabIndex = 23;
+            editorCheckBoxMoon.Text = "CRESCENT MOON";
+            editorCheckBoxMoon.UseVisualStyleBackColor = true;
+            editorCheckBoxMoon.CheckedChanged += OnEditorCheckBoxCheckedChanged;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(12, 53);
+            label6.Name = "label6";
+            label6.Size = new Size(101, 20);
+            label6.TabIndex = 22;
+            label6.Text = "Assign shapes";
+            // 
+            // editorCheckBoxTriangles
+            // 
+            editorCheckBoxTriangles.AutoSize = true;
+            editorCheckBoxTriangles.Location = new Point(215, 83);
+            editorCheckBoxTriangles.Name = "editorCheckBoxTriangles";
+            editorCheckBoxTriangles.Size = new Size(103, 24);
+            editorCheckBoxTriangles.TabIndex = 21;
+            editorCheckBoxTriangles.Text = "TRIANGLES";
+            editorCheckBoxTriangles.UseVisualStyleBackColor = true;
+            editorCheckBoxTriangles.CheckedChanged += OnEditorCheckBoxCheckedChanged;
+            // 
+            // editorCheckBoxCrosses
+            // 
+            editorCheckBoxCrosses.AutoSize = true;
+            editorCheckBoxCrosses.Location = new Point(120, 83);
+            editorCheckBoxCrosses.Name = "editorCheckBoxCrosses";
+            editorCheckBoxCrosses.Size = new Size(89, 24);
+            editorCheckBoxCrosses.TabIndex = 20;
+            editorCheckBoxCrosses.Text = "CROSSES";
+            editorCheckBoxCrosses.UseVisualStyleBackColor = true;
+            editorCheckBoxCrosses.CheckedChanged += OnEditorCheckBoxCheckedChanged;
+            // 
+            // editorCheckBoxDiagonal
+            // 
+            editorCheckBoxDiagonal.AutoSize = true;
+            editorCheckBoxDiagonal.Location = new Point(425, 53);
+            editorCheckBoxDiagonal.Name = "editorCheckBoxDiagonal";
+            editorCheckBoxDiagonal.Size = new Size(144, 24);
+            editorCheckBoxDiagonal.TabIndex = 19;
+            editorCheckBoxDiagonal.Text = "DIAGONAL LINES";
+            editorCheckBoxDiagonal.UseVisualStyleBackColor = true;
+            editorCheckBoxDiagonal.CheckedChanged += OnEditorCheckBoxCheckedChanged;
+            // 
+            // editorCheckBoxVertical
+            // 
+            editorCheckBoxVertical.AutoSize = true;
+            editorCheckBoxVertical.Location = new Point(286, 53);
+            editorCheckBoxVertical.Name = "editorCheckBoxVertical";
+            editorCheckBoxVertical.Size = new Size(133, 24);
+            editorCheckBoxVertical.TabIndex = 18;
+            editorCheckBoxVertical.Text = "VERTICAL LINES";
+            editorCheckBoxVertical.UseVisualStyleBackColor = true;
+            editorCheckBoxVertical.CheckedChanged += OnEditorCheckBoxCheckedChanged;
+            // 
+            // editorCheckBoxHorizontal
+            // 
+            editorCheckBoxHorizontal.AutoSize = true;
+            editorCheckBoxHorizontal.Location = new Point(120, 53);
+            editorCheckBoxHorizontal.Name = "editorCheckBoxHorizontal";
+            editorCheckBoxHorizontal.Size = new Size(160, 24);
+            editorCheckBoxHorizontal.TabIndex = 17;
+            editorCheckBoxHorizontal.Text = "HORIZONTAL LINES";
+            editorCheckBoxHorizontal.UseVisualStyleBackColor = true;
+            editorCheckBoxHorizontal.CheckedChanged += OnEditorCheckBoxCheckedChanged;
             // 
             // editorCheckBoxWhite
             // 
@@ -344,7 +582,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 43);
+            label2.Location = new Point(12, 131);
             label2.Name = "label2";
             label2.Size = new Size(102, 20);
             label2.TabIndex = 11;
@@ -416,13 +654,13 @@
             label1.AutoSize = true;
             label1.Location = new Point(12, 12);
             label1.Name = "label1";
-            label1.Size = new Size(93, 20);
+            label1.Size = new Size(96, 20);
             label1.TabIndex = 4;
-            label1.Text = "Select colors";
+            label1.Text = "Assign colors";
             // 
             // editorTextBoxCountry
             // 
-            editorTextBoxCountry.Location = new Point(120, 40);
+            editorTextBoxCountry.Location = new Point(120, 128);
             editorTextBoxCountry.Name = "editorTextBoxCountry";
             editorTextBoxCountry.Size = new Size(144, 26);
             editorTextBoxCountry.TabIndex = 1;
@@ -430,7 +668,7 @@
             // 
             // editorButtonRename
             // 
-            editorButtonRename.Location = new Point(270, 39);
+            editorButtonRename.Location = new Point(270, 127);
             editorButtonRename.Name = "editorButtonRename";
             editorButtonRename.Size = new Size(142, 27);
             editorButtonRename.TabIndex = 0;
@@ -446,7 +684,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(968, 454);
+            ClientSize = new Size(966, 570);
             Controls.Add(tabControl1);
             Controls.Add(flagsListView);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -493,8 +731,27 @@
         private Label label3;
         private Label label4;
         private TextBox filterTextBoxName;
-        private Button filterButtonReset;
+        private Button filterButtonResetName;
         private CheckBox filterCheckBoxPurple;
         private CheckBox filterCheckBoxExactMatch;
+        private Label label5;
+        private CheckBox filterCheckBoxCrosses;
+        private CheckBox filterCheckBoxMoon;
+        private CheckBox filterCheckBoxDiagonal;
+        private CheckBox filterCheckBoxVertical;
+        private CheckBox filterCheckBoxHorizontal;
+        private CheckBox filterCheckBoxWriting;
+        private CheckBox filterCheckBoxTriangles;
+        private GroupBox groupBox1;
+        private Button filterButtonResetShapes;
+        private GroupBox groupBox2;
+        private CheckBox editorCheckBoxTriangles;
+        private CheckBox editorCheckBoxCrosses;
+        private CheckBox editorCheckBoxDiagonal;
+        private CheckBox editorCheckBoxVertical;
+        private CheckBox editorCheckBoxHorizontal;
+        private Label label6;
+        private CheckBox editorCheckBoxWriting;
+        private CheckBox editorCheckBoxMoon;
     }
 }

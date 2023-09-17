@@ -14,6 +14,7 @@ namespace FlagColors
         public string? Name { get; set; }
         public string? PathToPicture { get; set; }
         public string[]? Colors { get; set; }
+        public string[]? Shapes { get; set; }
 
         private SvgDocument? _svg { get; set; }
         
@@ -41,6 +42,16 @@ namespace FlagColors
         public string[] GetColors()
         {
             return Colors ?? Array.Empty<string>();
+        }
+
+        public void AssignShapes(string[] shapes)
+        {
+            Shapes = shapes;
+        }
+
+        public string[] GetShapes()
+        {
+            return Shapes ?? Array.Empty<string>();
         }
 
         public SvgDocument GetSvgDocument()

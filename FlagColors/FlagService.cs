@@ -1,8 +1,6 @@
 ﻿
-using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using StringExtensions;
-using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace FlagColors

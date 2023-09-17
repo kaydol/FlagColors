@@ -10,6 +10,9 @@
         <string>BLACK</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Aland Islands</Name>
@@ -19,6 +22,9 @@
         <string>YELLOW</string>
         <string>BLUE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Albania</Name>
@@ -36,6 +42,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+        <string>CRESCENT MOON</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>American Samoa</Name>
@@ -45,6 +55,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Andorra</Name>
@@ -54,6 +67,9 @@
         <string>YELLOW</string>
         <string>BLUE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Angola</Name>
@@ -63,6 +79,9 @@
         <string>BLACK</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Antarctica</Name>
@@ -81,6 +100,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Argentina</Name>
@@ -90,6 +112,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Armenia</Name>
@@ -99,6 +124,9 @@
         <string>YELLOW</string>
         <string>BLUE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Australia</Name>
@@ -107,6 +135,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Austria</Name>
@@ -115,6 +146,9 @@
         <string>RED</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Azerbaijan</Name>
@@ -125,6 +159,10 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>CRESCENT MOON</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Bahamas</Name>
@@ -134,6 +172,10 @@
         <string>BLUE</string>
         <string>BLACK</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Bangladesh</Name>
@@ -151,6 +193,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Belarus</Name>
@@ -160,6 +205,9 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Belgium</Name>
@@ -169,6 +217,9 @@
         <string>YELLOW</string>
         <string>BLACK</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Belize</Name>
@@ -179,6 +230,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Benin</Name>
@@ -188,6 +242,10 @@
         <string>YELLOW</string>
         <string>GREEN</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Bhutan</Name>
@@ -197,6 +255,9 @@
         <string>YELLOW</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Bolivia</Name>
@@ -206,6 +267,9 @@
         <string>YELLOW</string>
         <string>GREEN</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Bonaire, Sint Eustatius and Saba</Name>
@@ -215,6 +279,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Bosnia and Herzegovina</Name>
@@ -224,6 +291,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Botswana</Name>
@@ -233,6 +303,9 @@
         <string>BLACK</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Brazil</Name>
@@ -252,6 +325,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Bulgaria</Name>
@@ -261,6 +337,9 @@
         <string>GREEN</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Burkina Faso</Name>
@@ -270,6 +349,9 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Burundi</Name>
@@ -280,6 +362,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Cape Verde</Name>
@@ -290,6 +375,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Cambodia</Name>
@@ -299,6 +387,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Cameroon</Name>
@@ -309,6 +400,9 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Canada</Name>
@@ -318,6 +412,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Central African Republic</Name>
@@ -329,6 +426,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Chad</Name>
@@ -338,6 +439,9 @@
         <string>YELLOW</string>
         <string>BLACK</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Chile</Name>
@@ -348,6 +452,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>China</Name>
@@ -365,6 +473,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Colombia</Name>
@@ -374,6 +485,9 @@
         <string>YELLOW</string>
         <string>BLUE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Comoros</Name>
@@ -386,6 +500,11 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+        <string>CRESCENT MOON</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Cook Islands</Name>
@@ -394,6 +513,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Costa Rica</Name>
@@ -403,6 +525,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Croatia</Name>
@@ -413,6 +538,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Cuba</Name>
@@ -423,6 +551,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Cyprus</Name>
@@ -439,6 +571,10 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Congo, the Democratic Republic of the Congo</Name>
@@ -449,6 +585,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Denmark</Name>
@@ -457,6 +596,9 @@
         <string>RED</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Djibouti</Name>
@@ -467,6 +609,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Dominican Republic</Name>
@@ -477,6 +623,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Ecuador</Name>
@@ -487,6 +636,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Egypt</Name>
@@ -497,6 +649,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>El Salvador</Name>
@@ -506,6 +661,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Equatorial Guinea</Name>
@@ -517,6 +675,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Eritrea</Name>
@@ -527,6 +689,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Estonia</Name>
@@ -536,6 +701,9 @@
         <string>BLACK</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Swaziland</Name>
@@ -546,6 +714,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Ethiopia</Name>
@@ -556,6 +727,9 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Falkland Islands (Malvinas)</Name>
@@ -564,6 +738,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Fiji</Name>
@@ -572,6 +749,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Finland</Name>
@@ -580,6 +760,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>France</Name>
@@ -589,6 +772,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>French Guiana</Name>
@@ -598,6 +784,9 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>French Polynesia</Name>
@@ -607,6 +796,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Gabon</Name>
@@ -616,6 +808,9 @@
         <string>GREEN</string>
         <string>BLUE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Gambia</Name>
@@ -626,6 +821,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Georgia</Name>
@@ -635,6 +833,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Germany</Name>
@@ -644,6 +845,9 @@
         <string>YELLOW</string>
         <string>BLACK</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Ghana</Name>
@@ -654,6 +858,9 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Greece</Name>
@@ -662,6 +869,10 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Greenland</Name>
@@ -689,6 +900,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Guatemala</Name>
@@ -698,6 +912,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Guinea-Bissau</Name>
@@ -708,6 +925,10 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Guinea</Name>
@@ -717,6 +938,9 @@
         <string>YELLOW</string>
         <string>GREEN</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Guyana</Name>
@@ -726,6 +950,9 @@
         <string>YELLOW</string>
         <string>GREEN</string>
       </Colors>
+      <Shapes>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Haiti</Name>
@@ -735,6 +962,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Honduras</Name>
@@ -744,6 +974,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Hong Kong</Name>
@@ -761,6 +994,9 @@
         <string>BLACK</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Iceland</Name>
@@ -770,6 +1006,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>India</Name>
@@ -780,6 +1019,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Indonesia</Name>
@@ -788,6 +1030,9 @@
         <string>RED</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Iran</Name>
@@ -798,6 +1043,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>WRITING</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Iraq</Name>
@@ -808,6 +1057,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>WRITING</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Ireland</Name>
@@ -817,6 +1070,9 @@
         <string>GREEN</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Israel</Name>
@@ -826,6 +1082,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Italy</Name>
@@ -835,6 +1094,9 @@
         <string>GREEN</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Cote d'Ivoire</Name>
@@ -844,6 +1106,9 @@
         <string>GREEN</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Jamaica</Name>
@@ -853,6 +1118,10 @@
         <string>GREEN</string>
         <string>BLACK</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Japan</Name>
@@ -872,6 +1141,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Kazakhstan</Name>
@@ -890,6 +1163,9 @@
         <string>BLACK</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Kiribati</Name>
@@ -912,6 +1188,9 @@
         <string>BLACK</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Kyrgyzstan</Name>
@@ -929,6 +1208,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Latvia</Name>
@@ -937,6 +1219,9 @@
         <string>RED</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Lebanon</Name>
@@ -946,6 +1231,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Lesotho</Name>
@@ -956,6 +1244,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Liberia</Name>
@@ -966,6 +1257,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Libya</Name>
@@ -976,6 +1270,10 @@
         <string>BLACK</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>CRESCENT MOON</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Liechtenstein</Name>
@@ -985,6 +1283,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Lithuania</Name>
@@ -994,6 +1295,9 @@
         <string>YELLOW</string>
         <string>GREEN</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Luxembourg</Name>
@@ -1003,6 +1307,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Macao</Name>
@@ -1020,6 +1327,10 @@
         <string>GREEN</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Malawi</Name>
@@ -1030,6 +1341,9 @@
         <string>BLACK</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Malaysia</Name>
@@ -1040,6 +1354,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>CRESCENT MOON</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Maldives</Name>
@@ -1049,6 +1367,9 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CRESCENT MOON</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Mali</Name>
@@ -1058,6 +1379,9 @@
         <string>YELLOW</string>
         <string>GREEN</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Malta</Name>
@@ -1067,6 +1391,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Marshall Islands</Name>
@@ -1077,6 +1404,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Martinique</Name>
@@ -1086,6 +1417,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Mauritania</Name>
@@ -1095,6 +1429,9 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CRESCENT MOON</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Mauritius</Name>
@@ -1105,6 +1442,9 @@
         <string>GREEN</string>
         <string>BLUE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Mexico</Name>
@@ -1115,6 +1455,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Micronesia, Federated States of Micronesia</Name>
@@ -1133,6 +1476,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Monaco</Name>
@@ -1141,6 +1487,9 @@
         <string>RED</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Mongolia</Name>
@@ -1150,6 +1499,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Montenegro</Name>
@@ -1178,6 +1530,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Namibia</Name>
@@ -1189,6 +1545,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Nepal</Name>
@@ -1197,6 +1556,9 @@
         <string>RED</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Netherlands</Name>
@@ -1206,6 +1568,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>New Caledonia</Name>
@@ -1216,6 +1581,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>New Zealand</Name>
@@ -1224,6 +1592,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Nicaragua</Name>
@@ -1233,6 +1604,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Niger</Name>
@@ -1242,6 +1616,9 @@
         <string>GREEN</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Nigeria</Name>
@@ -1250,6 +1627,9 @@
         <string>GREEN</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Korea, Democratic People's Republic of</Name>
@@ -1259,6 +1639,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>North Macedonia</Name>
@@ -1284,6 +1667,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Oman</Name>
@@ -1294,6 +1680,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Pakistan</Name>
@@ -1303,6 +1693,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CRESCENT MOON</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Palestinian, State of</Name>
@@ -1313,6 +1706,10 @@
         <string>BLACK</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Panama</Name>
@@ -1332,6 +1729,9 @@
         <string>BLACK</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Paraguay</Name>
@@ -1342,6 +1742,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Peru</Name>
@@ -1351,6 +1754,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Philippines</Name>
@@ -1361,6 +1767,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Poland</Name>
@@ -1369,6 +1779,9 @@
         <string>RED</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Portugal</Name>
@@ -1378,6 +1791,9 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Puerto Rico</Name>
@@ -1388,6 +1804,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Qatar</Name>
@@ -1405,6 +1825,9 @@
         <string>YELLOW</string>
         <string>GREEN</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Romania</Name>
@@ -1414,6 +1837,9 @@
         <string>YELLOW</string>
         <string>BLUE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Russian Federation</Name>
@@ -1423,6 +1849,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Rwanda</Name>
@@ -1433,6 +1862,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Saint Helena, Ascension and Tristan da Cunha</Name>
@@ -1442,6 +1874,10 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Saint Pierre and Miquelon</Name>
@@ -1451,6 +1887,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Samoa</Name>
@@ -1470,6 +1909,10 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Saudi Arabia</Name>
@@ -1478,6 +1921,9 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>WRITING</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Senegal</Name>
@@ -1488,6 +1934,9 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Serbia</Name>
@@ -1498,6 +1947,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Seychelles</Name>
@@ -1509,6 +1961,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Sierra Leone</Name>
@@ -1518,6 +1973,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Slovakia</Name>
@@ -1528,6 +1986,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Slovenia</Name>
@@ -1538,6 +1999,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Solomon Islands</Name>
@@ -1548,6 +2012,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Somalia</Name>
@@ -1568,6 +2035,9 @@
         <string>BLACK</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Korea, Republic of</Name>
@@ -1588,6 +2058,10 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Spain</Name>
@@ -1597,6 +2071,9 @@
         <string>YELLOW</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Sri Lanka</Name>
@@ -1606,6 +2083,9 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Sudan</Name>
@@ -1616,6 +2096,10 @@
         <string>BLACK</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Suriname</Name>
@@ -1626,6 +2110,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Svalbard and Jan Mayen</Name>
@@ -1635,6 +2122,9 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Sweden</Name>
@@ -1643,6 +2133,9 @@
         <string>YELLOW</string>
         <string>BLUE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Switzerland</Name>
@@ -1651,6 +2144,9 @@
         <string>RED</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Syrian Arab Republic</Name>
@@ -1661,6 +2157,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Taiwan, Province of China</Name>
@@ -1680,6 +2179,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Tanzania, United Republic of Tanzania</Name>
@@ -1690,6 +2192,9 @@
         <string>BLUE</string>
         <string>BLACK</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Thailand</Name>
@@ -1699,6 +2204,9 @@
         <string>BLACK</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Timor-Leste</Name>
@@ -1709,6 +2217,9 @@
         <string>BLACK</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Togo</Name>
@@ -1719,6 +2230,9 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Tonga</Name>
@@ -1727,6 +2241,9 @@
         <string>RED</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Trinidad and Tobago</Name>
@@ -1736,6 +2253,9 @@
         <string>BLACK</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Tunisia</Name>
@@ -1744,6 +2264,9 @@
         <string>RED</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CRESCENT MOON</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Turkey</Name>
@@ -1752,6 +2275,9 @@
         <string>RED</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CRESCENT MOON</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Turkmenistan</Name>
@@ -1760,6 +2286,9 @@
         <string>GREEN</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CRESCENT MOON</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Tuvalu</Name>
@@ -1768,6 +2297,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Uganda</Name>
@@ -1778,6 +2310,9 @@
         <string>BLACK</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Ukraine</Name>
@@ -1786,6 +2321,9 @@
         <string>YELLOW</string>
         <string>BLUE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>United Arab Emirates</Name>
@@ -1796,6 +2334,10 @@
         <string>BLACK</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>United Kingdom</Name>
@@ -1805,6 +2347,10 @@
         <string>BLUE</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>DIAGONAL LINES</string>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>United States</Name>
@@ -1815,6 +2361,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Uruguay</Name>
@@ -1824,6 +2373,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Virgin Islands, U.S.</Name>
@@ -1841,6 +2393,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>CRESCENT MOON</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Vanuatu</Name>
@@ -1852,6 +2407,9 @@
         <string>BLACK</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Holy See (Vatican City State)</Name>
@@ -1861,6 +2419,9 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Venezuela</Name>
@@ -1871,6 +2432,9 @@
         <string>BLUE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Viet Nam</Name>
@@ -1887,6 +2451,10 @@
         <string>RED</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+        <string>CROSSES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Western Sahara</Name>
@@ -1898,6 +2466,11 @@
         <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+        <string>CRESCENT MOON</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Yemen</Name>
@@ -1907,6 +2480,9 @@
         <string>BLACK</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Zambia</Name>
@@ -1918,6 +2494,9 @@
         <string>BLACK</string>
         <string>PICTURE</string>
       </Colors>
+      <Shapes>
+        <string>VERTICAL LINES</string>
+      </Shapes>
     </FlagModel>
     <FlagModel>
       <Name>Zimbabwe</Name>
@@ -1929,6 +2508,10 @@
         <string>BLACK</string>
         <string>WHITE</string>
       </Colors>
+      <Shapes>
+        <string>HORIZONTAL LINES</string>
+        <string>TRIANGLES</string>
+      </Shapes>
     </FlagModel>
   </Flags>
 </FlagData>

@@ -1,8 +1,4 @@
 
-using System.Collections.Immutable;
-using System.Windows.Forms;
-using System.Xml.Serialization;
-
 namespace FlagColors
 {
     public partial class MainForm : Form
@@ -78,10 +74,16 @@ namespace FlagColors
 
             if (GetTabControl().SelectedIndex == (int)Tabs.Editor)
             {
-                var controlsToEnable = GetEditorControls()
+                var colorsToEnable = GetEditorColorControls()
                     .Where(cb => flagModel.GetColors().Contains(cb.Text, StringComparer.OrdinalIgnoreCase));
 
-                foreach (var cb in controlsToEnable)
+                var shapesToEnable = GetEditorShapeControls()
+                    .Where(cb => flagModel.GetShapes().Contains(cb.Text, StringComparer.OrdinalIgnoreCase));
+
+                foreach (var cb in colorsToEnable)
+                    cb.Checked = true; // this triggers OnEditorCheckBoxCheckedChanged...
+
+                foreach (var cb in shapesToEnable)
                     cb.Checked = true; // this triggers OnEditorCheckBoxCheckedChanged...
 
                 GetEditorCountry().Text = selection.Text; // ...and this triggers OnEditorEditorTextBoxCountryEditorTextChanged
@@ -92,7 +94,7 @@ namespace FlagColors
 
         #region Editor
 
-        private IEnumerable<CheckBox> GetEditorControls()
+        private IEnumerable<CheckBox> GetEditorColorControls()
         {
             return new[]
             {
@@ -101,12 +103,26 @@ namespace FlagColors
             };
         }
 
+        private IEnumerable<CheckBox> GetEditorShapeControls()
+        {
+            return new[]
+            {
+                editorCheckBoxHorizontal, editorCheckBoxVertical, editorCheckBoxDiagonal,
+                editorCheckBoxCrosses, editorCheckBoxTriangles, editorCheckBoxMoon, editorCheckBoxWriting
+            };
+        }
+
         private Button GetEditorRenameButton() => editorButtonRename;
         private TextBox GetEditorCountry() => editorTextBoxCountry;
 
-        private IEnumerable<string> GetEditorControlsColors()
+        private IEnumerable<string> GetEditorColors()
         {
-            return GetEditorControls().Where(e => e.Checked).Select(e => e.Text);
+            return GetEditorColorControls().Where(e => e.Checked).Select(e => e.Text);
+        }
+
+        private IEnumerable<string> GetEditorShapes()
+        {
+            return GetEditorShapeControls().Where(e => e.Checked).Select(e => e.Text);
         }
 
         private void OnEditorCheckBoxCheckedChanged(object sender, EventArgs e)
@@ -114,7 +130,8 @@ namespace FlagColors
             if (GetCurrentSelection() == null)
                 return;
 
-            GetCurrentSelection()!.AssignColors(GetEditorControlsColors().ToArray());
+            GetCurrentSelection()!.AssignColors(GetEditorColors().ToArray());
+            GetCurrentSelection()!.AssignShapes(GetEditorShapes().ToArray());
         }
 
         private void OnEditorEditorTextBoxCountryEditorTextChanged(object sender, EventArgs e)
@@ -147,7 +164,10 @@ namespace FlagColors
 
             SetCurrentSelection(null); // has to be done first, because...
 
-            foreach (var cb in GetEditorControls())
+            foreach (var cb in GetEditorColorControls())
+                cb.Checked = false; // ...this triggers OnEditorCheckBoxCheckedChanged...
+
+            foreach (var cb in GetEditorShapeControls())
                 cb.Checked = false; // ...this triggers OnEditorCheckBoxCheckedChanged...
 
             GetEditorCountry().Text = string.Empty; // ...and this triggers OnEditorEditorTextBoxCountryEditorTextChanged
@@ -211,7 +231,7 @@ namespace FlagColors
 
         #region Filter
 
-        private IEnumerable<CheckBox> GetFilterControls()
+        private IEnumerable<CheckBox> GetFilterColorControls()
         {
             return new[]
             {
@@ -220,34 +240,57 @@ namespace FlagColors
             };
         }
 
-        private Button GetFilterNameResetButton() => filterButtonReset;
+        private IEnumerable<CheckBox> GetFilterShapeControls()
+        {
+            return new[]
+            {
+                filterCheckBoxHorizontal, filterCheckBoxVertical, filterCheckBoxDiagonal,
+                filterCheckBoxCrosses, filterCheckBoxTriangles, filterCheckBoxMoon, filterCheckBoxWriting
+            };
+        }
+
+        private Button GetFilterNameResetButton() => filterButtonResetName;
         private TextBox GetFilterName() => filterTextBoxName;
 
         private CheckBox GetFilterExactMatch() => filterCheckBoxExactMatch;
 
-        private IEnumerable<string> GetFilterControlsColors()
+        private IEnumerable<string> GetFilterColors()
         {
-            return GetFilterControls().Where(e => e.Checked).Select(e => e.Text);
+            return GetFilterColorControls().Where(e => e.Checked).Select(e => e.Text);
+        }
+
+        private IEnumerable<string> GetFilterShapes()
+        {
+            return GetFilterShapeControls().Where(e => e.Checked).Select(e => e.Text);
         }
 
         private void ClearFilterControls()
         {
-            SetCurrentSelection(null); // has to be done first, because...
+            _preventUpdate = true;
 
             GetFilterExactMatch().Checked = false; // ...this triggers OnEditorCheckBoxCheckedChanged...
 
-            foreach (var cb in GetFilterControls())
-                cb.Checked = false; // ...this triggers OnEditorCheckBoxCheckedChanged...
+            foreach (var cb in GetFilterColorControls())
+                cb.Checked = false; // ...this triggers OnFilterCheckBoxCheckedChanged...
+
+            foreach (var cb in GetFilterShapeControls())
+                cb.Checked = false; // ...this triggers OnFilterCheckBoxCheckedChanged...
 
             GetFilterName().Text = string.Empty; // ...and this triggers OnEditorEditorTextBoxCountryEditorTextChanged
+
+            _preventUpdate = false;
+            UpdateItems();
         }
+
+        private bool _preventUpdate;
 
         private void UpdateItems()
         {
-            if (_data.Flags == null)
+            if (_preventUpdate || _data.Flags == null)
                 return;
 
-            var colors = GetFilterControlsColors().ToArray();
+            var colors = GetFilterColors().ToArray();
+            var shapes = GetFilterShapes().ToArray();
 
             var isExactMatch = GetFilterExactMatch().Checked;
 
@@ -258,6 +301,9 @@ namespace FlagColors
                 // model satisfies color filter 
                 (!colors.Any() || (!isExactMatch && colors.All(c => x.GetColors().Contains(c, StringComparer.OrdinalIgnoreCase))) ||
                                   (isExactMatch && colors.Order().SequenceEqual(x.GetColors().Order(), StringComparer.OrdinalIgnoreCase)))
+                &&
+                // model satisfies shape filter
+                (!shapes.Any() || shapes.All(s => x.GetShapes().Contains(s, StringComparer.OrdinalIgnoreCase)))
                 &&
                 // model satisfies name filter 
                 (GetFilterName().Text == string.Empty || (x.Name!.Contains(GetFilterName().Text, StringComparison.OrdinalIgnoreCase)))
@@ -273,12 +319,29 @@ namespace FlagColors
                 var deleteByName = GetFilterName().Text != string.Empty &&
                     !item.Text.Contains(GetFilterName().Text, StringComparison.OrdinalIgnoreCase);
 
+                if (deleteByName)
+                {
+                    toRemove.Add(x.Name!);
+                    continue;
+                }
+
                 var deleteByColor = colors.Any() &&
                     ((!isExactMatch && !colors.All(c => x.GetColors().Contains(c, StringComparer.OrdinalIgnoreCase))) ||
                      (isExactMatch && !colors.Order().SequenceEqual(x.GetColors().Order(), StringComparer.OrdinalIgnoreCase)));
 
-                if (deleteByName || deleteByColor)
+                if (deleteByColor)
+                {
                     toRemove.Add(x.Name!);
+                    continue;
+                }
+
+                var deleteByShape = !shapes.All(c => x.GetShapes().Contains(c, StringComparer.OrdinalIgnoreCase));
+
+                if (deleteByShape)
+                {
+                    toRemove.Add(x.Name!);
+                    continue;
+                }
             }
 
             toAdd.ForEach(x =>
@@ -312,6 +375,18 @@ namespace FlagColors
             GetFilterName().Text = string.Empty;
         }
 
+        private void OnFilterButtonResetShapesClick(object sender, EventArgs e)
+        {
+            _preventUpdate = true;
+
+            foreach (var cb in GetFilterShapeControls())
+                cb.Checked = false; // ...this triggers OnFilterCheckBoxCheckedChanged...
+
+            _preventUpdate = false;
+            UpdateItems();
+        }
+
         #endregion
+
     }
 }
