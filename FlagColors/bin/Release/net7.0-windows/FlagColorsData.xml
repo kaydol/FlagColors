@@ -2525,5 +2525,18 @@
         <string>CRESCENT MOON</string>
       </Shapes>
     </FlagModel>
+    <FlagModel>
+      <Name>Dominica</Name>
+      <PathToPicture>\Data\Flag_of_Dominica.svg</PathToPicture>
+      <Colors>
+        <string>YELLOW</string>
+        <string>GREEN</string>
+        <string>BLACK</string>
+        <string>WHITE</string>
+      </Colors>
+      <Shapes>
+        <string>CROSSES</string>
+      </Shapes>
+    </FlagModel>
   </Flags>
 </FlagData>
