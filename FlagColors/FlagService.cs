@@ -1,6 +1,5 @@
 ﻿
 using System.Runtime.Serialization;
-using StringExtensions;
 using System.Xml.Serialization;
 
 namespace FlagColors
