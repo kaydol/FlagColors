@@ -370,7 +370,7 @@ namespace FlagColors
             UpdateItems();
         }
 
-        private void OnFilterButtonResetClick(object sender, EventArgs e)
+        private void OnFilterButtonResetNameClick(object sender, EventArgs e)
         {
             GetFilterName().Text = string.Empty;
         }
@@ -386,7 +386,33 @@ namespace FlagColors
             UpdateItems();
         }
 
-        #endregion
+        private void OnFilterButtonResetColorsClick(object sender, EventArgs e)
+        {
+            _preventUpdate = true;
 
+            foreach (var cb in GetFilterColorControls())
+                cb.Checked = false; // ...this triggers OnFilterCheckBoxCheckedChanged...
+
+            _preventUpdate = false;
+            UpdateItems();
+        }
+
+        private void OnFilterButtonResetAllClick(object sender, EventArgs e)
+        {
+            _preventUpdate = true;
+
+            GetFilterName().Text = string.Empty;
+
+            foreach (var cb in GetFilterShapeControls())
+                cb.Checked = false; // ...this triggers OnFilterCheckBoxCheckedChanged...
+
+            foreach (var cb in GetFilterColorControls())
+                cb.Checked = false; // ...this triggers OnFilterCheckBoxCheckedChanged...
+
+            _preventUpdate = false;
+            UpdateItems();
+        }
+
+        #endregion
     }
 }
