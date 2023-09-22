@@ -652,7 +652,7 @@
             editorTextBoxCountry.Name = "editorTextBoxCountry";
             editorTextBoxCountry.Size = new Size(103, 26);
             editorTextBoxCountry.TabIndex = 1;
-            editorTextBoxCountry.TextChanged += OnEditorEditorTextBoxCountryEditorTextChanged;
+            editorTextBoxCountry.TextChanged += OnEditorTextBoxCountryTextChanged;
             // 
             // editorButtonRename
             // 
@@ -662,7 +662,7 @@
             editorButtonRename.TabIndex = 0;
             editorButtonRename.Text = "Rename";
             editorButtonRename.UseVisualStyleBackColor = true;
-            editorButtonRename.Click += OnEditorEditorButtonRenameClick;
+            editorButtonRename.Click += OnEditorButtonRenameClick;
             // 
             // openFileDialog1
             // 

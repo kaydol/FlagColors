@@ -1,42 +1,56 @@
 
 namespace FlagColors
 {
-    public partial class MainForm : Form
+    internal partial class MainForm : Form
     {
-        private FlagData _data;
+        private FlagData? _data;
+
+        public FlagData? GetData() => _data;
+        public void SetData(FlagData? data) => _data = data;
+
+
         private FlagModel? _currentSelection;
+
+        private bool _preventUpdate;
+
+        public void PreventUpdate(bool value)
+        {
+            _preventUpdate = value;
+        }
 
         public MainForm()
         {
             InitializeComponent();
-
+            
             try
             {
                 var defaultData = FlagService.LoadDefaultDataFile();
-                _data = defaultData;
+                SetData(defaultData);
             }
             catch (Exception ex)
             {
                 ShowError(ex.Message);
             }
 
-            if (_data == null)
-                _data = new FlagData();
+            if (GetData() == null)
+                SetData(new FlagData());
 
-            //var pathToFile = "C:\\Users\\volya\\Desktop\\Flags of the world\\ToParse.txt";
-            //_data.Flags = FlagService.ParseWebPage(pathToFile);
-
-            _data.Flags?.ForEach(x =>
+            GetData()?.Flags?.ForEach(x =>
             {
-                imageList1.Images.Add(x.Name!, x.GetSvgDocument().Draw(imageList1.ImageSize.Width, imageList1.ImageSize.Height));
-                flagsListView.Items.Add(x.Name, x.Name, _data.Flags.IndexOf(x));
+                GetImageList().Images.Add(x.Name!, x.GetSvgDocument().Draw(GetImageList().ImageSize.Width, GetImageList().ImageSize.Height));
+                GetListView().Items.Add(x.Name, x.Name, GetData()!.Flags!.IndexOf(x));
             });
 
-            flagsListView.Sorting = SortOrder.Ascending;
-            flagsListView.Sort();
+            GetListView().Sorting = SortOrder.Ascending;
+            GetListView().Sort();
+
+            GetFilterResetAllButton().Enabled = false;
+            GetFilterColorsResetButton().Enabled = false;
+            GetFilterShapesResetButton().Enabled = false;
+            GetFilterNameResetButton().Enabled = false;
         }
 
-        private void ShowError(string message)
+        public void ShowError(string message)
         {
             var form = new PopupMessageForm("Error", message);
             form.ShowDialog();
@@ -48,9 +62,9 @@ namespace FlagColors
             Editor
         }
 
-        private TabControl GetTabControl() => tabControl1;
-        private FlagModel? GetCurrentSelection() => _currentSelection;
-        private void SetCurrentSelection(FlagModel? flag) => _currentSelection = flag;
+        public TabControl GetTabControl() => tabControl1;
+        public FlagModel? GetCurrentSelection() => _currentSelection;
+        public void SetCurrentSelection(FlagModel? flag) => _currentSelection = flag;
 
         private void OnTabControlSelectedIndexChanged(object sender, EventArgs e)
         {
@@ -61,16 +75,16 @@ namespace FlagColors
             OnItemSelectionChanged(null, null);
         }
 
-        private void OnItemSelectionChanged(object? sender, ListViewItemSelectionChangedEventArgs? e)
+        public void OnItemSelectionChanged(object? sender, ListViewItemSelectionChangedEventArgs? e)
         {
             ClearEditorControls();
 
-            if (flagsListView.SelectedItems.Count != 1)
+            if (GetListView().SelectedItems.Count != 1)
                 return;
 
             // fill Editor tab controls with values of the selected item
-            var selection = flagsListView.SelectedItems[0];
-            var flagModel = _data.Flags!.First(model => model.Name == selection.Text);
+            var selection = GetListView().SelectedItems[0];
+            var flagModel = GetData()!.Flags!.First(model => model.Name == selection.Text);
 
             if (GetTabControl().SelectedIndex == (int)Tabs.Editor)
             {
@@ -86,207 +100,15 @@ namespace FlagColors
                 foreach (var cb in shapesToEnable)
                     cb.Checked = true; // this triggers OnEditorCheckBoxCheckedChanged...
 
-                GetEditorCountry().Text = selection.Text; // ...and this triggers OnEditorEditorTextBoxCountryEditorTextChanged
+                GetEditorCountry().Text = selection.Text; // ...and this triggers OnEditorTextBoxCountryTextChanged
             }
 
             SetCurrentSelection(flagModel); // ...only do this after those
         }
 
-        #region Editor
-
-        private IEnumerable<CheckBox> GetEditorColorControls()
+        public void UpdateItems()
         {
-            return new[]
-            {
-                editorCheckBoxRed, editorCheckBoxYellow, editorCheckBoxGreen, editorCheckBoxBlue,
-                editorCheckBoxPurple, editorCheckBoxBlack, editorCheckBoxWhite, editorCheckBoxPicture
-            };
-        }
-
-        private IEnumerable<CheckBox> GetEditorShapeControls()
-        {
-            return new[]
-            {
-                editorCheckBoxHorizontal, editorCheckBoxVertical, editorCheckBoxDiagonal,
-                editorCheckBoxCrosses, editorCheckBoxTriangles, editorCheckBoxMoon, editorCheckBoxWriting
-            };
-        }
-
-        private Button GetEditorRenameButton() => editorButtonRename;
-        private TextBox GetEditorCountry() => editorTextBoxCountry;
-
-        private IEnumerable<string> GetEditorColors()
-        {
-            return GetEditorColorControls().Where(e => e.Checked).Select(e => e.Text);
-        }
-
-        private IEnumerable<string> GetEditorShapes()
-        {
-            return GetEditorShapeControls().Where(e => e.Checked).Select(e => e.Text);
-        }
-
-        private void OnEditorCheckBoxCheckedChanged(object sender, EventArgs e)
-        {
-            if (GetCurrentSelection() == null)
-                return;
-
-            GetCurrentSelection()!.AssignColors(GetEditorColors().ToArray());
-            GetCurrentSelection()!.AssignShapes(GetEditorShapes().ToArray());
-        }
-
-        private void OnEditorEditorTextBoxCountryEditorTextChanged(object sender, EventArgs e)
-        {
-            if (GetCurrentSelection() == null)
-                return;
-
-            if (GetCurrentSelection()!.Name != GetEditorCountry().Text)
-                GetEditorRenameButton().Enabled = true;
-            else
-                GetEditorRenameButton().Enabled = false;
-        }
-
-        private void OnEditorEditorButtonRenameClick(object sender, EventArgs e)
-        {
-            var x = GetCurrentSelection()!;
-
-            var index = flagsListView.Items.IndexOfKey(x.Name); // index must be calculated before AssignTitle
-            x.AssignTitle(GetEditorCountry().Text); // after we know the index, we can AssignTitle
-
-            flagsListView.Items.RemoveAt(index);
-            flagsListView.Items.Add(x.Name, x.Name, _data.Flags!.IndexOf(x));
-
-            GetEditorRenameButton().Enabled = false;
-        }
-
-        private void ClearEditorControls()
-        {
-            GetEditorRenameButton().Enabled = false;
-
-            SetCurrentSelection(null); // has to be done first, because...
-
-            foreach (var cb in GetEditorColorControls())
-                cb.Checked = false; // ...this triggers OnEditorCheckBoxCheckedChanged...
-
-            foreach (var cb in GetEditorShapeControls())
-                cb.Checked = false; // ...this triggers OnEditorCheckBoxCheckedChanged...
-
-            GetEditorCountry().Text = string.Empty; // ...and this triggers OnEditorEditorTextBoxCountryEditorTextChanged
-        }
-
-        private void OnEditorButtonSaveClick(object sender, EventArgs e)
-        {
-            saveFileDialog1.AddExtension = true;
-            saveFileDialog1.CreatePrompt = false;
-            saveFileDialog1.OverwritePrompt = true;
-            saveFileDialog1.DefaultExt = "FlagColors";
-            saveFileDialog1.Filter = "FlagColors data (*.xml)|*.xml";
-            saveFileDialog1.InitialDirectory = Path.GetDirectoryName(Application.ExecutablePath);
-
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    FlagService.Serialize(saveFileDialog1.FileName, _data);
-                }
-                catch (Exception ex)
-                {
-                    ShowError(ex.Message);
-                }
-            }
-        }
-
-        private void OnEditorButtonLoadClick(object sender, EventArgs e)
-        {
-            openFileDialog1.AddExtension = true;
-            openFileDialog1.DefaultExt = "*.xml";
-            openFileDialog1.Filter = "FlagColors data (*.xml)|*.xml";
-            openFileDialog1.InitialDirectory = Path.GetDirectoryName(Application.ExecutablePath);
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    _data = FlagService.Deserialize(openFileDialog1.FileName);
-
-                    imageList1.Images.Clear();
-                    flagsListView.Items.Clear();
-
-                    _data.Flags?.ForEach(x =>
-                    {
-                        imageList1.Images.Add(x.Name!, x.GetSvgDocument().Draw(imageList1.ImageSize.Width, imageList1.ImageSize.Height));
-                        flagsListView.Items.Add(x.Name, x.Name, _data.Flags.IndexOf(x));
-                    });
-
-                    flagsListView.Sorting = SortOrder.Ascending;
-                    flagsListView.Sort();
-                }
-                catch (Exception ex)
-                {
-                    ShowError(ex.Message);
-                }
-            }
-        }
-
-        #endregion
-
-        #region Filter
-
-        private IEnumerable<CheckBox> GetFilterColorControls()
-        {
-            return new[]
-            {
-                filterCheckBoxRed, filterCheckBoxYellow, filterCheckBoxGreen, filterCheckBoxBlue,
-                filterCheckBoxPurple, filterCheckBoxBlack, filterCheckBoxWhite, filterCheckBoxPicture
-            };
-        }
-
-        private IEnumerable<CheckBox> GetFilterShapeControls()
-        {
-            return new[]
-            {
-                filterCheckBoxHorizontal, filterCheckBoxVertical, filterCheckBoxDiagonal,
-                filterCheckBoxCrosses, filterCheckBoxTriangles, filterCheckBoxMoon, filterCheckBoxWriting
-            };
-        }
-
-        private Button GetFilterNameResetButton() => filterButtonResetName;
-        private TextBox GetFilterName() => filterTextBoxName;
-
-        private CheckBox GetFilterExactMatch() => filterCheckBoxExactMatch;
-
-        private IEnumerable<string> GetFilterColors()
-        {
-            return GetFilterColorControls().Where(e => e.Checked).Select(e => e.Text);
-        }
-
-        private IEnumerable<string> GetFilterShapes()
-        {
-            return GetFilterShapeControls().Where(e => e.Checked).Select(e => e.Text);
-        }
-
-        private void ClearFilterControls()
-        {
-            _preventUpdate = true;
-
-            GetFilterExactMatch().Checked = false; // ...this triggers OnEditorCheckBoxCheckedChanged...
-
-            foreach (var cb in GetFilterColorControls())
-                cb.Checked = false; // ...this triggers OnFilterCheckBoxCheckedChanged...
-
-            foreach (var cb in GetFilterShapeControls())
-                cb.Checked = false; // ...this triggers OnFilterCheckBoxCheckedChanged...
-
-            GetFilterName().Text = string.Empty; // ...and this triggers OnEditorEditorTextBoxCountryEditorTextChanged
-
-            _preventUpdate = false;
-            UpdateItems();
-        }
-
-        private bool _preventUpdate;
-
-        private void UpdateItems()
-        {
-            if (_preventUpdate || _data.Flags == null)
+            if (_preventUpdate || GetData()!.Flags == null)
                 return;
 
             var colors = GetFilterColors().ToArray();
@@ -297,7 +119,7 @@ namespace FlagColors
             var toAdd = new List<FlagModel>();
             var toRemove = new List<string>();
 
-            toAdd.AddRange(_data.Flags.Where(x =>
+            toAdd.AddRange(GetData()!.Flags!.Where(x =>
                 // model satisfies color filter 
                 (!colors.Any() || (!isExactMatch && colors.All(c => x.GetColors().Contains(c, StringComparer.OrdinalIgnoreCase))) ||
                                   (isExactMatch && colors.Order().SequenceEqual(x.GetColors().Order(), StringComparer.OrdinalIgnoreCase)))
@@ -309,12 +131,12 @@ namespace FlagColors
                 (GetFilterName().Text == string.Empty || (x.Name!.Contains(GetFilterName().Text, StringComparison.OrdinalIgnoreCase)))
                 &&
                 // model is not in flagsListView.Items
-                !flagsListView.Items.ContainsKey(x.Name)
+                !GetListView().Items.ContainsKey(x.Name)
             ));
 
-            foreach (ListViewItem item in flagsListView.Items)
+            foreach (ListViewItem item in GetListView().Items)
             {
-                var x = _data.Flags.First(x => x.Name == item.Name);
+                var x = GetData()!.Flags!.First(x => x.Name == item.Name);
 
                 var deleteByName = GetFilterName().Text != string.Empty &&
                     !item.Text.Contains(GetFilterName().Text, StringComparison.OrdinalIgnoreCase);
@@ -346,73 +168,12 @@ namespace FlagColors
 
             toAdd.ForEach(x =>
             {
-                flagsListView.Items.Add(x.Name, x.Name, _data.Flags.IndexOf(x));
+                GetListView().Items.Add(x.Name, x.Name, GetData()!.Flags!.IndexOf(x));
             });
 
-            toRemove.ForEach(flagsListView.Items.RemoveByKey);
+            toRemove.ForEach(GetListView().Items.RemoveByKey);
 
-            flagsListView.Sorting = SortOrder.Ascending;
-            flagsListView.Sort();
+            GetListView().Sort();
         }
-
-        private void OnFilterCheckBoxCheckedChanged(object sender, EventArgs e)
-        {
-            UpdateItems();
-        }
-
-        private void OnFilterTextBoxNameTextChanged(object sender, EventArgs e)
-        {
-            if (GetFilterName().Text != string.Empty)
-                GetFilterNameResetButton().Enabled = true;
-            else
-                GetFilterNameResetButton().Enabled = false;
-
-            UpdateItems();
-        }
-
-        private void OnFilterButtonResetNameClick(object sender, EventArgs e)
-        {
-            GetFilterName().Text = string.Empty;
-        }
-
-        private void OnFilterButtonResetShapesClick(object sender, EventArgs e)
-        {
-            _preventUpdate = true;
-
-            foreach (var cb in GetFilterShapeControls())
-                cb.Checked = false; // ...this triggers OnFilterCheckBoxCheckedChanged...
-
-            _preventUpdate = false;
-            UpdateItems();
-        }
-
-        private void OnFilterButtonResetColorsClick(object sender, EventArgs e)
-        {
-            _preventUpdate = true;
-
-            foreach (var cb in GetFilterColorControls())
-                cb.Checked = false; // ...this triggers OnFilterCheckBoxCheckedChanged...
-
-            _preventUpdate = false;
-            UpdateItems();
-        }
-
-        private void OnFilterButtonResetAllClick(object sender, EventArgs e)
-        {
-            _preventUpdate = true;
-
-            GetFilterName().Text = string.Empty;
-
-            foreach (var cb in GetFilterShapeControls())
-                cb.Checked = false; // ...this triggers OnFilterCheckBoxCheckedChanged...
-
-            foreach (var cb in GetFilterColorControls())
-                cb.Checked = false; // ...this triggers OnFilterCheckBoxCheckedChanged...
-
-            _preventUpdate = false;
-            UpdateItems();
-        }
-
-        #endregion
     }
 }

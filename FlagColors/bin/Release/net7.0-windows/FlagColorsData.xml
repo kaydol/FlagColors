@@ -2449,6 +2449,8 @@
       <PathToPicture>\Data\wf.svg</PathToPicture>
       <Colors>
         <string>RED</string>
+        <string>BLUE</string>
+        <string>WHITE</string>
         <string>PICTURE</string>
       </Colors>
       <Shapes>
